@@ -1,6 +1,7 @@
-import * as React from "react"
+import * as React from "react";
+import {Helmet} from "react-helmet";
+import "../styles.scss"
 
-// styles
 const pageStyles = {
   color: "#232129",
   padding: 96,
@@ -125,13 +126,16 @@ const links = [
   },
 ]
 
-// markup
 const IndexPage = () => {
   return (
     <main style={pageStyles}>
-      <title>Home Page</title>
+      <Helmet>
+          <meta charSet="utf-8" />
+          <title>Taylor Dunworth | UI/UX Designer and Front-End Developer</title>
+      </Helmet>
+
       <h1 style={headingStyles}>
-        Congratulations
+        Hello, I'm Taylor.
         <br />
         <span style={headingAccentStyles}>— you just made a Gatsby site! </span>
         <span role="img" aria-label="Party popper emojis">
@@ -181,4 +185,4 @@ const IndexPage = () => {
   )
 }
 
-export default IndexPage
+export default IndexPage;

@@ -89,17 +89,20 @@ const events = [
 
 const SpeakingEvents = () => {
   return (
-    <ul>
-        {events.map(event => (
-        <li key={event.id}>
-            {event.titles.map(title => (
-            <h3 key={title.id}>{title.eventName}</h3>
+    <div>
+        <h2>Speaking</h2>
+        <ul>
+            {events.map(event => (
+            <li key={event.id}>
+                {event.titles.map(title => (
+                <h3 key={title.id}>{title.eventName}</h3>
+                ))}
+                <h4>{event.host}</h4>
+                <p>{event.description}</p>
+            </li>
             ))}
-            <h4>{event.host}</h4>
-            <p>{event.description}</p>
-        </li>
-        ))}
-    </ul>
+        </ul>
+    </div>
   )
 }
 

@@ -1,5 +1,6 @@
 import * as React from "react";
-import "../styles.scss"
+import Layout from "./layout";
+import "../styles.scss";
 
 const work = [
     { 
@@ -41,17 +42,19 @@ const work = [
 
 const Work = () => {
   return (
-    <div>
-        <h2>My Work</h2>
-        <hr />
-        <ul>
-            {work.map(project => (
-            <li key={project.id}>
-                <h3>{project.name}</h3>
-                <span>{project.description}</span>
-            </li>
-            ))}
-        </ul>
+    <div id="work">
+        <Layout>
+            <h2>My Work</h2>
+            <hr />
+            <ul>
+                {work.map(project => (
+                <li key={project.id}>
+                    <h3>{project.name}</h3>
+                    <span>{project.description}</span>
+                </li>
+                ))}
+            </ul>
+        </Layout>
     </div>
   )
 }

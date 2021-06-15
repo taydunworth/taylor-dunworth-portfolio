@@ -1,53 +1,58 @@
 import * as React from "react";
-import "../styles.scss"
+import Layout from "./layout";
+import "../styles.scss";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCodepen, faGithubAlt, faLinkedinIn, faDribbble } from '@fortawesome/free-brands-svg-icons';
 
 const social = [
     {
-        platform: "Email",
-        URL: "mailto:taydunworth@gmail.com",
-        id: 1,
-        icon: "fa-envelope"
-    },
-    {
         platform: "Codepen",
-        URL: "URL",
+        url: "https://codepen.io/taylordunworth",
         id: 2,
-        icon: "fa-codepen"
+        icon: faCodepen,
     },
     {
         platform: "Github",
-        URL: "URL",
+        url: "https://github.com/taydunworth",
         id: 3,
-        icon: "fa-github"
+        icon: faGithubAlt,
     },
     {
         platform: "LinkedIn",
-        URL: "URL",
+        url: "https://www.linkedin.com/in/taydunworth/",
         id: 4,
-        icon: "fa-linkedin"
+        icon: faLinkedinIn,
     },
     {
         platform: "Dribbble",
-        URL: "URL",
+        url: "https://dribbble.com/taydunworth",
         id: 5,
-        icon: "fa-dribbble"
+        icon: faDribbble,
     },
 ]
 
 const Footer = () => {
     return (
-      <div>
-          <span>Taylor Dunworth</span>
-          <ul>
-              {social.map(platform => (
-              <li key={platform.id}>
-                  <a href={platform.url} target="_blank">ICON</a>
-              </li>
-              ))}
-          </ul>
-          <hr />
-          <p>Created with figma and react. <a href="https://github.com/taydunworth/taylor-dunworth-portfolio" target="_blank">Check out my code!</a></p>
-          <p>Copyright 2021, Taylor Dunworth</p>
+      <div id="footer">
+        <Layout>
+            <div className="flex">
+                <span className="logo">Taylor Dunworth</span>
+                <ul>
+                    {social.map(platform => (
+                    <li key={platform.id}>
+                        <a href={platform.url} target="_blank">
+                            <FontAwesomeIcon icon={platform.icon} />
+                        </a>
+                    </li>
+                    ))}
+                </ul>
+            </div>
+            <div>
+                <hr />
+                <p>Created with figma and react. <a href="https://github.com/taydunworth/taylor-dunworth-portfolio" target="_blank">Check out my code!</a></p>
+                <p>Copyright 2021, Taylor Dunworth</p>
+            </div>
+        </Layout>
       </div>
     )
   }

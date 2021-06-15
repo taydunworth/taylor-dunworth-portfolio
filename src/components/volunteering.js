@@ -46,12 +46,12 @@ const positions = [
 const Volunteering = () => {
   return (
       <div>
-        <h2>Volunteering</h2>
+        <h3>Volunteering</h3>
         <ul>
             {positions.map(position => (
             <li key={position.id}>
-                <h3>{position.org}</h3>
-                <h4>{position.position}</h4>
+                <h4>{position.org}</h4>
+                <h5>{position.position}</h5>
                 <p>{position.description}</p>
             </li>
             ))}

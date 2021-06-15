@@ -1,1 +1,283 @@
-// Styles here
+// Fonts
+@font-face {
+  font-family: "Meritocracy";
+  src: url("./fonts/Meritocracy-Regular.woff");
+  font-weight: normal;
+}
+
+@font-face {
+    font-family: "Fjord Bold";
+    src: url("./fonts/Fjord-Bold.woff");
+  }
+  
+
+// Variables
+$coral: #EA9794;
+$peach: #F3E1D9;
+$lightcoral: #F09D9A;
+$lace: #F9F8F6;
+$slate: #21323E;
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: brandon-grotesque, sans-serif;
+    font-size: 1em;
+    color: $slate;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        margin: 0;
+    }
+
+    .arrow-link {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-weight: 900;
+        font-style: normal;
+        font-size: 1em;
+        text-decoration: none;
+        color: $slate;
+    
+        .down-arrow {
+            display: block;
+            margin: 0 auto;
+            padding-top: 10px;
+            font-size: 1.3em;
+        }
+    }
+
+    hr {
+        border-color: $slate;
+        width: 60px;
+        transform: rotate(90deg);
+        margin: 60px auto;
+    }
+
+    h2 {
+        font-family: "Fjord Bold", serif;
+        text-transform: lowercase;
+        color: $slate;
+        font-size: 2.5em;
+        text-align: center;
+    }
+
+    h4 {
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-weight: 900;
+        font-style: normal;
+        font-size: 1.2em;
+        color: $slate;
+        padding-bottom: 10px;
+    }
+
+    h5 {
+        font-weight: 700;
+        font-style: normal;
+        font-size: 1em;
+    }
+
+    .script {
+        font-family: "Meritocracy", script;
+        text-transform: lowercase;
+        font-size: 1.5em;
+        color: $slate;
+        font-weight: normal;
+    }
+
+    .logo {
+        font-family: "Meritocracy", script;
+        text-transform: lowercase;
+        font-size: 2em;
+        color: $slate;
+        flex-basis: 1;
+    }
+}
+
+#hero {
+    background-color: $coral;
+    height: 100vh;
+
+    nav {
+        background-color: $coral;
+        padding: 40px 0;
+        
+        div {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            align-items: center;
+        
+            ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                display: flex;
+                justify-content: space-between;
+                flex-basis: 4;
+    
+                li {
+                    padding-right: 20px;
+
+                    a {
+                        text-transform: uppercase;
+                        letter-spacing: 2px;
+                        font-weight: 900;
+                        font-style: normal;
+                        font-size: .8em;
+                        text-decoration: none;
+                        color: $slate;
+                    }
+
+                    &:last-child {
+                        padding-right: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    #inner-hero {
+        background-color: $lightcoral;
+        padding: 40px;
+        height: 65vh;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        h1 {
+            font-family: "Fjord Bold", serif;
+            text-transform: lowercase;
+            color: $slate;
+            font-size: 5em;
+        }
+
+        p {
+            width: 70%;
+            font-size: 1.8em;
+            margin: 0 auto;
+        }
+
+        a {
+            display: block;
+            margin-top: 30px;
+        }
+    }
+}
+
+#about {
+    background-color: $peach;
+    padding: 40px 0;
+}
+
+#buzzwords {
+    background-color: $lace;
+    padding: 40px 0;
+
+    .pill {
+        background-color: $coral;
+        color: $lace;
+        border-radius: 20px;
+        padding: 5px 15px;
+        display: inline-block;
+        margin: 5px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-weight: 900;
+        font-style: normal;
+        font-size: .7em;
+    }
+}
+
+#process {
+    background-color: $peach;
+    padding: 40px 0;
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+}
+
+#work {
+    background-color: $lace;
+    padding: 40px 0;
+}
+
+#community {
+    background-color: $peach;
+    padding: 40px 0;
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+}
+
+#footer {
+    padding: 30px 0;
+    background-color: $lace;
+
+    .flex {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+    
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: space-between;
+            flex-basis: 4;
+
+            li {
+                padding-right: 30px;
+
+                a {
+                    text-transform: uppercase;
+                    letter-spacing: 2px;
+                    font-weight: 900;
+                    font-style: normal;
+                    font-size: 1.3em;
+                    text-decoration: none;
+                    color: $slate;
+                }
+
+                &:last-child {
+                    padding-right: 0;
+                }
+            }
+        }
+    }
+
+    hr {
+        transform: none;
+        width: 100%;
+    }
+
+    p {
+        text-align: center;
+        color: $slate;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-weight: 900;
+        font-size: .8em;
+        
+        a {
+            color: $slate;
+        }
+    }
+}

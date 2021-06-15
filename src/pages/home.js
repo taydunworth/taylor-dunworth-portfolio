@@ -1,31 +1,24 @@
 import * as React from "react";
-import Layout from "../components/layout";
-import Nav from "../components/nav";
 import Hero from "../components/hero";
 import About from "../components/about";
 import Buzzwords from "../components/buzzwords";
 import Process from "../components/process";
 import Work from "../components/work";
-import SpeakingEvents from "../components/speakingEvents";
-import Volunteering from "../components/volunteering";
+import Community from "../components/community";
 import Footer from "../components/footer";
 import "../styles.scss"
 
 const IndexPage = () => {
   return (
-    <Layout>
-        <main>
-            <Nav />
-            <Hero />
-            <About />
-            <Buzzwords />
-            <Process />
-            <Work />
-            <SpeakingEvents />
-            <Volunteering />
-            <Footer />
-        </main>
-    </Layout>
+    <main>
+        <Hero />
+        <About />
+        <Buzzwords />
+        <Process />
+        <Work />
+        <Community />
+        <Footer />
+    </main>
   )
 }
 

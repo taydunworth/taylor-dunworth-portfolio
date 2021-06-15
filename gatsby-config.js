@@ -1,3 +1,5 @@
+require("dotenv").config()
+
 module.exports = {
   siteMetadata: {
     title: "Taylor Dunworth Portfolio",
@@ -7,6 +9,7 @@ module.exports = {
     "gatsby-plugin-image",
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sitemap",
+    `gatsby-plugin-fontawesome-css`,
     {
       resolve: "gatsby-plugin-manifest",
       options: {
@@ -22,6 +25,14 @@ module.exports = {
         path: "./src/images/",
       },
       __key: "images",
+    },
+    {
+    resolve: "gatsby-plugin-web-font-loader",
+      options: {
+        typekit: {
+          id: process.env.TYPEKIT_ID,
+        },
+      },
     },
   ],
 };

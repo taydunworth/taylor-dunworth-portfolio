@@ -90,14 +90,14 @@ const events = [
 const SpeakingEvents = () => {
   return (
     <div>
-        <h2>Speaking</h2>
+        <h3>Speaking</h3>
         <ul>
             {events.map(event => (
             <li key={event.id}>
                 {event.titles.map(title => (
-                <h3 key={title.id}>{title.eventName}</h3>
+                <h4 key={title.id}>{title.eventName}</h4>
                 ))}
-                <h4>{event.host}</h4>
+                <h5>{event.host}</h5>
                 <p>{event.description}</p>
             </li>
             ))}

@@ -1,5 +1,11 @@
 import * as React from "react";
-import "../styles.scss"
+import Layout from "./layout";
+import "../styles.scss";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLongArrowAltDown } from '@fortawesome/free-solid-svg-icons';
+import { library } from "@fortawesome/fontawesome-svg-core";
+
+library.add(faLongArrowAltDown);
 
 const process = [
     { 
@@ -46,17 +52,19 @@ const process = [
 
 const Process = () => {
   return (
-    <div>
-        <h2>My Ideal Process</h2>
-        <ul>
-            {process.map(step => (
-            <li key={step.id}>
-                <h3>{step.title}</h3>
-                <span>{step.description}</span>
-            </li>
-            ))}
-        </ul>
-        <a href="">See My Process in Action</a>
+    <div id="process">
+        <Layout>
+            <h2>My <span className="script">Ideal</span> Process</h2>
+            <ul>
+                {process.map(step => (
+                <li key={step.id}>
+                    <h3>{step.title}</h3>
+                    <span>{step.description}</span>
+                </li>
+                ))}
+            </ul>
+            <a className="arrow-link" href="">See My Process in Action<FontAwesomeIcon className="down-arrow" icon="long-arrow-alt-down" /></a>
+        </Layout>
     </div>
   )
 }

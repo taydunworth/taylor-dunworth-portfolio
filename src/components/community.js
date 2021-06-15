@@ -9,8 +9,8 @@ const Community = () => {
     <div id="community">
         <Layout>
           <h2>My <span className="script">Community</span> Involvement</h2>
-          <SpeakingEvents />
           <Volunteering />
+          <SpeakingEvents />
         </Layout>
     </div>
   )

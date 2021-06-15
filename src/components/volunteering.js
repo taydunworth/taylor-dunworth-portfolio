@@ -1,5 +1,22 @@
 import React from "react";
 
+function CurrentOrPast(props) {
+  const isCurrent = props.isCurrent;
+  if (isCurrent) {
+    return (
+      <div className="current-pill">
+        <span>Current</span>
+      </div>
+    );
+  } else {
+    return (
+      <div className="past-pill">
+          <span>Past</span>
+      </div>
+    );
+  }
+}
+
 const positions = [
     {
       org: "Women Who Code",
@@ -51,6 +68,7 @@ const Volunteering = () => {
             {positions.map(position => (
             <li key={position.id}>
                 <h4>{position.org}</h4>
+                <CurrentOrPast isCurrent={position.current} />
                 <h5>{position.position}</h5>
                 <p>{position.description}</p>
             </li>

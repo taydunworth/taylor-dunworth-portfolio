@@ -55,7 +55,7 @@ body {
     }
 
     hr {
-        border-color: $slate;
+        border: 1px solid $slate;
         width: 60px;
         transform: rotate(90deg);
         margin: 60px auto;
@@ -69,14 +69,21 @@ body {
         text-align: center;
     }
 
+    h3 {
+        font-size: 2em;
+        font-weight: 400;
+        padding: 20px 0;
+    }
+
     h4 {
         text-transform: uppercase;
         letter-spacing: 2px;
         font-weight: 900;
         font-style: normal;
-        font-size: 1.2em;
+        font-size: 1em;
         color: $slate;
         padding-bottom: 10px;
+        padding: 5px 0;
     }
 
     h5 {
@@ -96,7 +103,7 @@ body {
     .logo {
         font-family: "Meritocracy", script;
         text-transform: lowercase;
-        font-size: 2em;
+        font-size: 2.5em;
         color: $slate;
         flex-basis: 1;
     }
@@ -206,6 +213,17 @@ body {
         list-style: none;
         padding: 0;
         margin: 0;
+
+        h3 {
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 900;
+            font-style: normal;
+            font-size: 1em;
+            color: $slate;
+            padding-bottom: 10px;
+            padding: 5px 0;
+        }
     }
 }
 
@@ -222,6 +240,44 @@ body {
         list-style: none;
         padding: 0;
         margin: 0;
+
+        li {
+            padding: 20px 0;
+        }
+    }
+
+    h4 {
+        display: inline-block;
+    }
+
+    .current-pill {
+        background-color: $coral;
+        color: $lace;
+        border-radius: 20px;
+        padding: 5px 15px;
+        display: inline-block;
+        margin: 5px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-weight: 900;
+        font-style: normal;
+        font-size: .7em;
+        margin-left: 20px;
+    }
+
+    .past-pill {
+        background-color: $lace;
+        color: $coral;
+        border-radius: 20px;
+        padding: 5px 15px;
+        display: inline-block;
+        margin: 5px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-weight: 900;
+        font-style: normal;
+        font-size: .7em;
+        margin-left: 20px;
     }
 }
 

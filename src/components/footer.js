@@ -40,7 +40,7 @@ const Footer = () => {
                 <ul>
                     {social.map(platform => (
                     <li key={platform.id}>
-                        <a href={platform.url} target="_blank">
+                        <a href={platform.url} target="_blank" rel="noreferrer">
                             <FontAwesomeIcon icon={platform.icon} />
                         </a>
                     </li>
@@ -49,7 +49,7 @@ const Footer = () => {
             </div>
             <div>
                 <hr />
-                <p>Created with figma and react. <a href="https://github.com/taydunworth/taylor-dunworth-portfolio" target="_blank">Check out my code!</a></p>
+                <p>Created with Figma and React/Gatsby. <a href="https://github.com/taydunworth/taylor-dunworth-portfolio" target="_blank" rel="noreferrer">Check out my code!</a></p>
                 <p>Copyright 2021, Taylor Dunworth</p>
             </div>
         </Layout>

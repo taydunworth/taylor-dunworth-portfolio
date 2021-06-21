@@ -14,7 +14,7 @@ const buzzwords = [
     { word: "UI Design", id: 9},
     { word: "Invision", id: 10},
     { word: "Figma", id: 11},
-    { word: "Git/Command Line", id: 12},
+    { word: "Git/Version Control", id: 12},
     { word: "WordPress", id: 13},
     { word: "Squarespace", id: 14},
     { word: "Shopify", id: 15},
@@ -24,6 +24,7 @@ const buzzwords = [
     { word: "Web Design", id: 19},
     { word: "Product Design", id: 20},
     { word: "Visual Studio Code", id: 21},
+    { word: "Material Design", id: 22},
 ]
 
 const Buzzwords = () => {

@@ -9,9 +9,7 @@ const events = [
           },
       ],
       host: "Presence",
-      id: "e1",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas facilisis egestas integer quis ut semper ullamcorpe.",
+      id: "e1"
     },
     {
         titles: [
@@ -29,9 +27,7 @@ const events = [
             },
         ],
         host: "Suncoast Developers Guild",
-        id: "e2",
-        description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas facilisis egestas integer quis ut semper ullamcorpe.",
+        id: "e2"
       },
       {
         titles: [
@@ -41,9 +37,7 @@ const events = [
             },
         ],
         host: "Women Who Code Tampa",
-        id: "e3",
-        description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas facilisis egestas integer quis ut semper ullamcorpe.",
+        id: "e3"
       },
       {
         titles: [
@@ -53,9 +47,7 @@ const events = [
             },
         ],
         host: "JoomlaDay Florida",
-        id: "e4",
-        description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas facilisis egestas integer quis ut semper ullamcorpe.",
+        id: "e4"
       },
       {
         titles: [
@@ -69,9 +61,7 @@ const events = [
             },
         ],
         host: "Suncoast.js",
-        id: "e5",
-        description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas facilisis egestas integer quis ut semper ullamcorpe.",
+        id: "e5"
       },
       {
         titles: [
@@ -81,15 +71,13 @@ const events = [
             },
         ],
         host: "CMS Summit",
-        id: "e6",
-        description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas facilisis egestas integer quis ut semper ullamcorpe.",
+        id: "e6"
       },
     ]
 
 const SpeakingEvents = () => {
   return (
-    <div>
+    <div id="speaking">
         <h3>Speaking</h3>
         <ul>
             {events.map(event => (

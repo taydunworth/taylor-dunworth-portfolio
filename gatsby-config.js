@@ -3,7 +3,7 @@ require("dotenv").config()
 module.exports = {
   pathPrefix: `/`,
   siteMetadata: {
-    title: "Taylor Dunworth Portfolio",
+    title: "Taylor Dunworth | UI/UX Designer and Developer",
     siteUrl: "https://www.taylordunworth.com"
   },
   plugins: [

@@ -35,8 +35,8 @@ const social = [
 ]
 
 const Footer = () => {
-    const scrollToElement = () => {
-      scroller.scrollTo('about', {
+    const scrollToElement = (location) => {
+      scroller.scrollTo(location, {
         duration: 800,
         delay: 0,
         smooth: 'easeInOutQuart'

@@ -2,95 +2,65 @@ import React from "react";
 
 const events = [
     {
-      titles: [
-          { 
-              eventName: "Understanding and Implementing Web Accessibility",
-              id: "e1-01",
-          },
-      ],
-      host: "Presence",
-      id: "e1"
+        title: "Understanding and Implementing Web Accessibility",
+        host: "Presence",
+        id: "e1",
     },
     {
-        titles: [
-            { 
-                eventName: "Intro to XAML and Xamarin.Forms",
-                id: "e2-01",
-            },
-            { 
-                eventName: "Intro to Public Speaking",
-                id: "e2-02",
-            },
-            { 
-                eventName: "Intro to CSS",
-                id: "e2-03",
-            },
-        ],
+        title: "Intro to XAML and Xamarin.Forms",
         host: "Suncoast Developers Guild",
-        id: "e2"
-      },
-      {
-        titles: [
-            {
-                eventName:  "Modern Features for Javascript: Foundations of ECMAScript (ES6+)",
-                id: "e3-01",
-            },
-        ],
+        id: "e2",
+    },
+    {
+        title: "Intro to Public Speaking",
+        host: "Suncoast Developers Guild",
+        id: "e3",
+    },
+    {
+        title: "Intro to CSS",
+        host: "Suncoast Developers Guild",
+        id: "e4",
+    },
+    {
+        title: "Modern Features of Javascript: Foundations of ECMAScript (ES6+)",
         host: "Women Who Code Tampa",
-        id: "e3"
-      },
-      {
-        titles: [
-            {
-                eventName: "Responsive Layouts with Bootstrap, Flexbox, and CSS Grid",
-                id: "e4-01",
-            },
-        ],
+        id: "e5",
+    },
+    {
+        title: "Responsive Layouts with Bootstrap, Flexbox, and CSS Grid",
         host: "JoomlaDay Florida",
-        id: "e4"
-      },
-      {
-        titles: [
-            {
-                eventName: "Should Designers Code?",
-                id: "e5-01",
-            },
-            {
-                eventName: "'Just Do This,' 'It’s Easy,' and Other Ways You’re Discouraging Your Developers",
-                id: "e5-02",
-            },
-        ],
-        host: "Suncoast.js",
-        id: "e5"
-      },
-      {
-        titles: [
-            {
-                eventName: "Breaking Up with Design",
-                id: "e6-01",
-            },
-        ],
+        id: "e6",
+    },
+    {
+        title: "Should Designers Code?",
+        host: "Suncoast.JS",
+        id: "e7",
+    },
+    {
+        title: "'Just Do This,' 'It’s Easy,' and Other Ways You’re Discouraging Your Developers",
+        host: "Suncoast.JS",
+        id: "e8",
+    },
+    {
+        title: "Breaking Up with Design",
         host: "CMS Summit",
-        id: "e6"
-      },
-    ]
+        id: "e9",
+    },
+]
 
 const SpeakingEvents = () => {
   return (
-    <div id="speaking">
-        <h3>Speaking</h3>
+    <article id="speaking">
+        <h3>Past Speaking Events</h3>
         <ul>
-            {events.map(event => (
-            <li key={event.id}>
-                {event.titles.map(title => (
-                <h4 key={title.id}>{title.eventName}</h4>
-                ))}
-                <h5>{event.host}</h5>
-                <p>{event.description}</p>
+            {events.map(speakingEvent => (
+            <li key={speakingEvent.id}>
+                <h4>{speakingEvent.title}</h4>
+                <h5>Hosted by: <span>{speakingEvent.host}</span></h5>
             </li>
             ))}
         </ul>
-    </div>
+    </article>
   )
 }
 

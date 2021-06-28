@@ -1,6 +1,6 @@
 import * as React from "react";
 import Layout from "./layout";
-import "../styles.scss";
+import "../styles/styles.scss";
 
 const work = [
     { 
@@ -80,7 +80,7 @@ const Work = () => {
     <div id="work">
         <Layout>
             <h2>My Work</h2>
-            <hr />
+            <hr role="none" />
             <ul className="grid-container">
                 {work.map(project => (
                 <li className="portfolio-item"

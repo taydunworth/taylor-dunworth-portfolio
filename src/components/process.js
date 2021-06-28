@@ -1,6 +1,6 @@
 import * as React from "react";
 import Layout from "./layout";
-import "../styles.scss";
+import "../styles/styles.scss";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLongArrowAltDown } from '@fortawesome/free-solid-svg-icons';
 import { library } from "@fortawesome/fontawesome-svg-core";
@@ -37,7 +37,7 @@ const process = [
     { 
         title: "Develop",
         id: 6,
-        description: "Once the design has a stamp of approval, I'll collaborate with front-end and back-end developers to bring the prototype to life via code using WCAG guidelines for a11y and best practices for clean code. In some cases, I'll provide the front-end code myself.",
+        description: "Once the design has a stamp of approval, I'll collaborate with front-end and back-end developers to bring the prototype to life via code using WCAG guidelines for a11y and best practices for clean code. In many cases, I'll provide the front-end code myself.",
     },
     { 
         title: "Test (Again)",
@@ -62,7 +62,7 @@ class Process extends React.Component {
       
       render() {
         return (
-        <div id="process">
+        <article id="process">
             <Layout>
                 <h2>My <span className="script">Ideal</span> Process</h2>
                 <ul>
@@ -70,12 +70,12 @@ class Process extends React.Component {
                     <li className="process-step-box" key={step.id}>
                         <h3>{step.title}</h3>
                         <span>{step.description}</span>
+                        <FontAwesomeIcon className="process-arrow" icon="long-arrow-alt-down" />
                     </li>
                     ))}
                 </ul>
-                <a to="work" onClick={() => this.scrollToElement()} className="arrow-link" >See My Process in Action<FontAwesomeIcon className="down-arrow" icon="long-arrow-alt-down" /></a>
             </Layout>
-        </div>
+        </article>
         )
     }
 }

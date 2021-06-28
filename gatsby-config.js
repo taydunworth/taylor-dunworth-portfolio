@@ -1,8 +1,10 @@
 require("dotenv").config()
 
 module.exports = {
+  pathPrefix: `/`,
   siteMetadata: {
     title: "Taylor Dunworth Portfolio",
+    siteUrl: "https://www.taylordunworth.com"
   },
   plugins: [
     "gatsby-plugin-sass",

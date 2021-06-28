@@ -1,6 +1,6 @@
 import * as React from "react";
 import Layout from "./layout";
-import "../styles.scss";
+import "../styles/styles.scss";
 
 const buzzwords = [
     { word: "Adobe Creative Suite", id: 1},
@@ -29,10 +29,9 @@ const buzzwords = [
 
 const Buzzwords = () => {
   return (
-    <div id="buzzwords">
+    <section id="buzzwords">
       <Layout>
         <h2>I'm Familiar With ...</h2>
-        <hr />
         <ul>
             {buzzwords.map(buzzword => (
             <li className="pill" key={buzzword.id}>
@@ -41,7 +40,7 @@ const Buzzwords = () => {
             ))}
         </ul>
       </Layout>
-    </div>
+    </section>
   )
 }
 

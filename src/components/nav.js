@@ -1,7 +1,7 @@
 import * as React from "react";
-import Layout from "./layout";
-import "../styles.scss";
+import "../styles/styles.scss";
 import { scroller } from 'react-scroll';
+import Resume from "../images/Taylor-Dunworth-Resume.pdf";
 
 class Nav extends React.Component {
   scrollToElement(location) {
@@ -14,20 +14,20 @@ class Nav extends React.Component {
   
   render() {
     return (
-      <nav>
-        <Layout>
+      <section id="navigation">
           <div>
             <span className="logo">Taylor Dunworth</span>
-            <ul>
-                <li><a to="about" onClick={() => this.scrollToElement("about")}>About</a></li>
-                <li><a to="work" onClick={() => this.scrollToElement("work")}>Work</a></li>
-                <li><a href="#resume">Resume</a></li>
-                <li><a to="community" onClick={() => this.scrollToElement("community")}>Community</a></li>
-                <li><a href="#about">Contact</a></li>
-            </ul>
+            <nav aria-label="Main Navigation">
+              <ul>
+                  <li><button to="about" role="link" onClick={() => this.scrollToElement("about")}>About</button></li>
+                  <li><a href={Resume} target="_blank" rel="noreferrer">Resume</a></li>
+                  <li><button to="community" role="link" onClick={() => this.scrollToElement("community")}>Community</button></li>
+                  <li><a href="mailto:taydunworth@gmail.com">Contact</a></li>
+              </ul>
+            </nav>
           </div>
-        </Layout>
-      </nav>
+
+      </section>
     )
   }
 }

@@ -5,8 +5,7 @@ import "../styles/mobile.scss";
 import Resume from "../images/Taylor-Dunworth-Resume.pdf";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCodepen, faGithubAlt, faLinkedinIn, faDribbble } from '@fortawesome/free-brands-svg-icons';
-
-
+import { scroller } from 'react-scroll';
 
 const social = [
     {
@@ -36,36 +35,44 @@ const social = [
 ]
 
 const Footer = () => {
+    const scrollToElement = () => {
+      scroller.scrollTo('about', {
+        duration: 800,
+        delay: 0,
+        smooth: 'easeInOutQuart'
+      });
+    };
+  
     return (
-      <footer>
-        <Layout>
-            <div className="flex">
-                <span className="logo">Taylor Dunworth</span>
-                <ul id="footer-nav" aria-label="Main Navigation" role="navigation">
-                    <li><button to="about" role="link" onClick={() => this.scrollToElement("about")}>About</button></li>
-                    <li><a href={Resume} target="_blank" rel="noreferrer">Resume</a></li>
-                    <li><button to="community" role="link" onClick={() => this.scrollToElement("community")}>Community</button></li>
-                    <li><a href="mailto:taydunworth@gmail.com">Contact</a></li>
-                </ul>
-            </div>
-            <div>
-                <hr />
-                <ul id="social" aria-label="Social Media Links">
-                    {social.map(platform => (
-                    <li key={platform.id}>
-                        <a href={platform.url} target="_blank" rel="noreferrer" aria-label={platform.platform}>
-                            <FontAwesomeIcon icon={platform.icon} />
-                        </a>
-                    </li>
-                    ))}
-                </ul>
-                <p>Created with Figma and React/Gatsby. <a href="https://github.com/taydunworth/taylor-dunworth-portfolio" target="_blank" rel="noreferrer">Check out my code!</a></p>
-                <p>Copyright 2021, Taylor Dunworth</p>
-            </div>
-        </Layout>
-      </footer>
+        <footer>
+            <Layout>
+                <div className="flex">
+                    <span className="logo">Taylor Dunworth</span>
+                    <ul id="footer-nav" aria-label="Main Navigation" role="navigation">
+                        <li><button to="about" role="link" onClick={() => scrollToElement("about")}>About</button></li>
+                        <li><a href={Resume} target="_blank" rel="noreferrer">Resume</a></li>
+                        <li><button to="community" role="link" onClick={() => scrollToElement("community")}>Community</button></li>
+                        <li><a href="mailto:taydunworth@gmail.com">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <hr />
+                    <ul id="social" aria-label="Social Media Links">
+                        {social.map(platform => (
+                        <li key={platform.id}>
+                            <a href={platform.url} target="_blank" rel="noreferrer" aria-label={platform.platform}>
+                                <FontAwesomeIcon icon={platform.icon} />
+                            </a>
+                        </li>
+                        ))}
+                    </ul>
+                    <p>Created with Figma and React/Gatsby. <a href="https://github.com/taydunworth/taylor-dunworth-portfolio" target="_blank" rel="noreferrer">Check out my code!</a></p>
+                    <p>Copyright 2021, Taylor Dunworth</p>
+                </div>
+            </Layout>
+        </footer>
     )
-  }
+}
   
 
 export default Footer;

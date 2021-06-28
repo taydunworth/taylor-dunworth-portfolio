@@ -25,16 +25,16 @@ const positions = [
 
 const Volunteering = () => {
   return (
-      <article id="volunteering">
-        <h3>Volunteering</h3>
-        <ul>
-            {positions.map(position => (
-            <li key={position.id}>
-              <h4>{position.org}</h4>
-              <p>{position.position}</p>
-            </li>
-            ))}
-        </ul>
+    <article id="volunteering">
+      <h3>Volunteering</h3>
+      <ul>
+          {positions.map(position => (
+          <li key={position.id}>
+            <h4>{position.org}</h4>
+            <p>{position.position}</p>
+          </li>
+          ))}
+      </ul>
     </article>
   )
 }

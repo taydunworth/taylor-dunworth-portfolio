@@ -23,9 +23,9 @@ const Hero = () => {
           <hr role="none" />
           <p>I’m a UI/UX designer and developer, who thrives on translating my user-centric interface designs into accessible, clean code.</p>
           <button to="about" role="link" onClick={() => scrollToElement()} className="arrow-link">Get to Know Me<FontAwesomeIcon className="down-arrow" icon="long-arrow-alt-down" /></button>
-        </div>
+      </div>
     </section>
-    )
-  }
+  )
+}
 
 export default Hero;

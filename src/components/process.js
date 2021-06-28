@@ -51,17 +51,8 @@ const process = [
     },
 ]
 
-class Process extends React.Component {
-    scrollToElement() {
-        scroller.scrollTo('work', {
-          duration: 800,
-          delay: 0,
-          smooth: 'easeInOutQuart'
-        });
-      }
-      
-      render() {
-        return (
+const Process = () => {  
+    return (
         <article id="process">
             <Layout>
                 <h2>My <span className="script">Ideal</span> Process</h2>
@@ -76,8 +67,7 @@ class Process extends React.Component {
                 </ul>
             </Layout>
         </article>
-        )
-    }
+    )
 }
 
 export default Process;

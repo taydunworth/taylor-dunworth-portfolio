@@ -8,6 +8,7 @@ import Buzzwords from "../components/buzzwords";
 import Process from "../components/process";
 import Community from "../components/community";
 import Footer from "../components/footer";
+import Favicon from "../images/icon.png";
 import "../styles/styles.scss";
 import "../styles/mobile.scss";
 import 'animate.css';
@@ -18,6 +19,7 @@ const IndexPage = () => {
         <Helmet>
           <meta charSet="utf-8" />
           <title>Taylor Dunworth | UI/UX Designer and Developer</title>
+          <link rel="icon" type="image/png" href={Favicon}></link>
         </Helmet>
         <MobileNav />
         <Nav />

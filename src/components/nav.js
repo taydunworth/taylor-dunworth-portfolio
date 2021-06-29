@@ -19,6 +19,7 @@ const Nav = () => {
         <nav aria-label="Main Navigation">
           <ul>
             <li><button to="about" role="link" onClick={() => scrollToElement("about")}>About</button></li>
+            <li><a href="https://taylordunworth.myportfolio.com/">Work</a></li>
             <li><a href={Resume} target="_blank" rel="noreferrer">Resume</a></li>
             <li><button to="community" role="link" onClick={() => scrollToElement("community")}>Community</button></li>
             <li><a href="mailto:taydunworth@gmail.com">Contact</a></li>

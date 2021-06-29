@@ -50,6 +50,7 @@ const Footer = () => {
                     <span className="logo">Taylor Dunworth</span>
                     <ul id="footer-nav" aria-label="Main Navigation" role="navigation">
                         <li><button to="about" role="link" onClick={() => scrollToElement("about")}>About</button></li>
+                        <li><a href="https://taylordunworth.myportfolio.com/">Work</a></li>
                         <li><a href={Resume} target="_blank" rel="noreferrer">Resume</a></li>
                         <li><button to="community" role="link" onClick={() => scrollToElement("community")}>Community</button></li>
                         <li><a href="mailto:taydunworth@gmail.com">Contact</a></li>
